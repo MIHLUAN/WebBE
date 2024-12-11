@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple RESTful API Frontend</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Manage Users</h1>
+
+      <!-- Form thêm mới user -->
+      <form id="userForm">
+        <input type="text" id="name" placeholder="Name" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="number" id="age" placeholder="Age" required />
+        <button type="submit">Add User</button>
+      </form>
+      <!-- Form cập nhật user -->
+      <form id="updateForm" style="display: none">
+        <input type="text" id="updateName" placeholder="Name" required />
+        <input type="email" id="updateEmail" placeholder="Email" required />
+        <input type="number" id="updateAge" placeholder="Age" required />
+        <input type="hidden" id="updateId" />
+        <button type="submit">Update User</button>
+        <button type="button" onclick="cancelUpdate()">Cancel</button>
+      </form>
+
+      <h2>User List</h2>
+      <div id="userList"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
